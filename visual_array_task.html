@@ -95,7 +95,8 @@
   var conclusion = {
     type: 'html-keyboard-response',
     stimulus: '<div style="font-size:20px;">This task is over. Thank you for your participation in this task. <br><br>Please call the Research Assistant.</div>',
-    choices: jsPsych.NO_KEYS
+    allow_backward: false,
+    key_forward: "k"
   }
 
 var fixation = {
