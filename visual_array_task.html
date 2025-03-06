@@ -9,7 +9,7 @@
     <script src="jspsych-6.0.4/plugins/jspsych-instructions.js"></script>
     <script src="jspsych-6.0.4/plugins/jspsych-fullscreen.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jstat@latest/dist/jstat.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="jatos.js"></script>
     <link href="jspsych-6.0.4/css/jspsych_visualarray.css" rel="stylesheet" type="text/css"></link>
   </head>
   <body>
@@ -173,9 +173,11 @@ var dataLog = {
         file_name += ".csv"
       }
       if (local){
-        data.localSave('csv', file_name )
+        // data.localSave('csv', file_name )
+        console.log("Locally saving data");
       } else {
-        saveData(file_name, data.csv());
+        // saveData(file_name, data.csv());
+        console.log("Saving data to server");
       }
    }
 }
@@ -212,13 +214,16 @@ timeline.push({
 timeline.push(dataLog)
 timeline.push(conclusion)
 
-
-jsPsych.init({
-  timeline: timeline,
-  preload_images: images,
-  on_finish: function() {
-    jsPsych.data.displayData(); // comment out if you do not want to display results at the end of task
-  }
+jatos.onLoad(function() {
+  jsPsych.init({
+    timeline: timeline,
+    preload_images: images,
+    on_finish: function() {
+      var resultJson = jsPsych.data.get().json();
+      jatos.submitResultData(resultJson, jatos.startNextComponent);
+      jsPsych.data.displayData(); // comment out if you do not want to display results at the end of task
+    }
+  })
 });
 </script>
 </html>
