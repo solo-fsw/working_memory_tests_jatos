@@ -162,10 +162,10 @@ var feedback = {
 var conclusion = {
   type: 'html-keyboard-response',
   stimulus: function(){
-    return '<div style="font-size:20px;">You have completed the task.<br>Thank you for your participation in this task.<br><br>Maximum number of digits recalled correctly was ' + highest_span_score +'.<br><br>Maximum number of digits reached before making two consecutive errors was ' +consec_error_score+'.<br><br>Please tell the Research Assistant you have completed the task.</div>'
+    return '<div style="font-size:20px;">You have completed the task.<br>Thank you for your participation in this task.<br><br>Maximum number of digits recalled correctly was ' + highest_span_score +'.<br><br>Maximum number of digits reached before making two consecutive errors was ' +consec_error_score+'.<br><br>Please press \'k\' to finish the task.</div>'
 },
-  choices: jsPsych.NO_KEYS
-//  trial_duration:1000
+  allow_backward: false,
+  key_forward: "k"
 }
 
   var test_stack = {
