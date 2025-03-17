@@ -85,7 +85,7 @@
   var exp_instructions = {
     type: 'instructions',
     pages: function(){
-      pageOne = '<div style="font-size:20px;">We will now start with the main trials. </b><br><br>Remember: <br>Press <b>"S"</b> if color is <b>SAME</b>. <br>Press <b>"K"</b> is color is <b>DIFFERENT</b>.<br><br>If you have not understood the task, please call the Research Assistant for help.<br><br>If you have understod the task, press "K" to start the main trials.</div>'
+      pageOne = '<div style="font-size:20px;">We will now start with the main trials. </b><br><br>Remember: <br>Press <b>"S"</b> if color is <b>SAME</b>. <br>Press <b>"K"</b> is color is <b>DIFFERENT</b>.<br><br>Press "K" to start the main trials.</div>'
       return [pageOne]
     },
     allow_backward: false,
@@ -162,6 +162,7 @@ function saveData(filename, filedata){
 };
 
 var IDsub = Date.now()
+
 var dataLog = {
  type: 'html-keyboard-response',
  stimulus: " ",

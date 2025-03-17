@@ -52,6 +52,7 @@
   var highest_span_score = 0
   var consec_error_score = 0
 
+
   // first page. identifies participant for data storage
   var p_details = {
     type:"survey-text",
@@ -62,7 +63,7 @@
 //      console.log(partN[0])
     }
   }
-
+  
 // instruction page
 var instructions = {
     type: 'instructions',
@@ -78,7 +79,7 @@ var instructions = {
   var instructions_node = {
       type: 'instructions',
       pages: function(){
-        pageOne = "<div style='font-size:20px;'>You have completed the practice trials. <br><br> If you have further questions about the task, ask the researcher now.<br> If you are clear about the task, click 'Next' to proceed to the main trials.<br><br></div>"
+        pageOne = "<div style='font-size:20px;'>You have completed the practice trials. <br><br> Click 'Next' to proceed to the main trials.<br><br></div>"
         return [pageOne]
       },
       allow_backward: false,
