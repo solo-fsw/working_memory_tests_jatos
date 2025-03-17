@@ -1,6 +1,7 @@
 # Working Memory Tests
 Working memory experiment tasks designed on JavaScript
 
+This version was altered to save results in JATOS rather than locally or on another server. There are jzips added for easy importing in JATOS, if you want to change anything please create a copy of the jzip and make alterations there. This will prevent UUID issues.
 
 Four classic working memory (WM) tests are included in this directory. All have been designed on JavaScript using the jsPsych library (https://www.jspsych.org/). These WM tests have previously been used in lab experiments (data from experiments is included in directory). Paper resulting from these experiments can be found here: https://mindmodeling.org/cogsci2019/papers/0141/index.html.
 
