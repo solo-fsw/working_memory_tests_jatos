@@ -174,11 +174,9 @@ var dataLog = {
         file_name += ".csv"
       }
       if (local){
-        // data.localSave('csv', file_name )
-        console.log("Locally saving data");
+        data.localSave('csv', file_name )
       } else {
-        // saveData(file_name, data.csv());
-        console.log("Saving data to server");
+        saveData(file_name, data.csv());
       }
    }
 }
@@ -212,7 +210,7 @@ timeline.push({
   type: 'fullscreen',
   fullscreen_mode: false
 });
-timeline.push(dataLog)
+// timeline.push(dataLog) Commenting out the datalog function as the data will be logged in jatos automatically.
 timeline.push(conclusion)
 
 jatos.onLoad(function() {
