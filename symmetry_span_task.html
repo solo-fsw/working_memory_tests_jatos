@@ -280,10 +280,10 @@ var feedback = {
           file_name += ".csv"
         }
         if (local){
-          //data.localSave('csv', file_name )
+          data.localSave('csv', file_name )
           console.log("Locally saving data");
         } else {
-          //saveData(file_name, data.csv());
+          saveData(file_name, data.csv());
           console.log("Saving data to server");
         }
      }
