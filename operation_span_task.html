@@ -367,6 +367,8 @@ var feedback = {
       timeline: timeline,
       on_finish: function() {
         var resultJson = jsPsych.data.get().json();
+        var subjectcode = jatos.urlQueryParameters.subjectcode;
+        jatos.appendResultData(subjectcode);
         jatos.submitResultData(resultJson, jatos.startNextComponent);
         jsPsych.data.displayData(); // comment out if you do not want to display results at the end of task
       }
