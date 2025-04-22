@@ -272,10 +272,10 @@ var feedback = {
   var conclusion = {
     type: 'html-keyboard-response',
     stimulus: function(){
-      return '<div style="font-size:20px;">This task is over.<br><br>Thank you for your participation in this task. <br><br>Please press \'k\' to finish the task.</div>'
-  },
-    callow_backward: false,
-    key_forward: "k"
+      return '<div style="font-size:20px;">This task is over.<br><br>Thank you for your participation in this task.</div>'
+    },
+    choices: jsPsych.NO_KEYS,
+    trial_duration: 3000
   }
 
   var p_details = {
@@ -348,6 +348,7 @@ var feedback = {
     repetitions: nfullDemo
   }
 
+  timeline = []
   //timeline = [p_details]
   //timeline.push({
   //  type: 'fullscreen',
